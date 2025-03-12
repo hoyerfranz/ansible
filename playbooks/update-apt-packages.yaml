@@ -3,6 +3,7 @@
 
   become: true
   become_user: root
+  shell:  while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 5; done;
   tasks:
     - name: update apt packages
       apt:
