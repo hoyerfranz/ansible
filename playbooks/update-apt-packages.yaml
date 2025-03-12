@@ -6,7 +6,7 @@
   tasks:
     - name: update apt packages
       apt:
-        upgrade: yes
+        upgrade: full
         update_cache: yes
       register: apt_action
       retries: 100
