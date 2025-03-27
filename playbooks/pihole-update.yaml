@@ -1,7 +1,13 @@
 - name: Update pihole
+
   hosts: pihole.nightdevil.net
   become: true
   become_user: root  
+  tasks:
+  - name: pihole update
+    shell: pihole -up
+
+  hosts: pihole
   tasks:
   - name: pihole update
     shell: pihole -up
