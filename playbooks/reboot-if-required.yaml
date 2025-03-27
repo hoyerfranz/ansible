@@ -1,6 +1,6 @@
 ---
 - name: Reboot the server
-  hosts: all  # This targets all hosts in your inventory 
+  hosts: all
   become: true
   tasks:
 
